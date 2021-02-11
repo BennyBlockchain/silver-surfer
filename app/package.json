@@ -10,9 +10,11 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "mongodb": "^3.6.4",
     "next": "10.0.6",
     "react": "^16.14.0",
+    "react-bootstrap": "^1.4.3",
     "react-dom": "^16.14.0"
   },
   "devDependencies": {
@@ -21,6 +23,7 @@
     "@storybook/addon-essentials": "^6.1.17",
     "@storybook/addon-links": "^6.1.17",
     "@storybook/react": "^6.1.17",
-    "babel-loader": "^8.2.2"
+    "babel-loader": "^8.2.2",
+    "sass": "^1.32.7"
   }
 }
