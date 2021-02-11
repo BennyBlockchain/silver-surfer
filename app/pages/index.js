@@ -6,13 +6,14 @@ import { connectToDatabase } from "../util/mongodb";
 import { Modal, Button, Row } from "react-bootstrap";
 
 export default function Home(...props) {
-  console.log(props);
   const isConnected = props[0].isConnected;
   const queryString = props[0].query;
   const queryArr = JSON.parse(queryString);
   const database = props[0].database;
+
   const [show, setShow] = useState(false);
   const handleModal = () => setShow(!show);
+
   return (
     <>
       <Head>
