@@ -5,11 +5,10 @@ import { connectToDatabase } from "../util/mongodb";
 
 import { Modal, Button, Row } from "react-bootstrap";
 
-export default function Home(...props) {
-  const isConnected = props[0].isConnected;
-  const queryString = props[0].query;
-  const queryArr = JSON.parse(queryString);
-  const database = props[0].database;
+export default function Home(props) {
+  const { conn, query } = props;
+  const queryArr = JSON.parse(query);
+  console.log(queryArr);
 
   const [show, setShow] = useState(false);
   const handleModal = () => setShow(!show);
@@ -21,10 +20,8 @@ export default function Home(...props) {
       </Head>
       <Row className="mx-0">
         <p className={`${styles.text}`}>Database status: </p>
-        {isConnected ? (
-          <p
-            className={`${styles.conn} ${styles.text}`}
-          >{`Good | DB: ${database}`}</p>
+        {conn ? (
+          <p className={`${styles.conn} ${styles.text}`}>{`Good`}</p>
         ) : (
           <p className={`${styles.noConn} ${styles.text}`}>Failed</p>
         )}
@@ -73,7 +70,7 @@ export default function Home(...props) {
 
 export async function getServerSideProps(context) {
   const { client, db, database } = await connectToDatabase();
-  const isConnected = await client.isConnected();
+  const conn = await client.isConnected();
   const mongoCourse = await db
     .collection("CoursePage")
     .find({ courseID: "CS492" })
@@ -81,6 +78,6 @@ export async function getServerSideProps(context) {
   const query = JSON.stringify(mongoCourse);
 
   return {
-    props: { isConnected, query, database },
+    props: { conn, query },
   };
 }
