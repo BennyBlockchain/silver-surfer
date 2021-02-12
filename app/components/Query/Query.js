@@ -1,21 +1,28 @@
 import { Modal, Button } from "react-bootstrap";
-import styles from "./StoryExample.module.css";
+import styles from "./Query.module.scss";
 
-const StoryExample = ({ courseID, professor, team, project }) => {
+const Query = ({ courseID, professor, team, project }) => {
   return (
     <>
       <Modal show={true} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Collection: CoursePage</Modal.Title>
+          <Modal.Title>
+            <h3>Silver Surfer DB Query</h3>
+          </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <h6 className={styles.header}>Course</h6>
+          <p className="text-muted">
+            db: silver-mongo <br />
+            collection: CoursePages
+          </p>
+
+          <h5 className={styles.header}>Course</h5>
           <p className={styles.paragraph}>{courseID}</p>
-          <h6 className={styles.header}>Professor</h6>
+          <h5 className={styles.header}>Professor</h5>
           <p className={styles.paragraph}>{professor}</p>
-          <h6 className={styles.header}>Team</h6>
+          <h5 className={styles.header}>Team</h5>
           <p className={styles.paragraph}>{team}</p>
-          <h6 className={styles.header}>Project Name</h6>
+          <h5 className={styles.header}>Project Name</h5>
           <p className={styles.paragraph}>{project}</p>
         </Modal.Body>
         <Modal.Footer>
@@ -26,4 +33,4 @@ const StoryExample = ({ courseID, professor, team, project }) => {
   );
 };
 
-export default StoryExample;
+export default Query;
