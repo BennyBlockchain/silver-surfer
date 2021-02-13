@@ -1,14 +1,9 @@
-// Component dependencies
 import { Modal, Button } from "react-bootstrap";
 import styles from "./Query.module.css";
 
 /**
  * Query
- * * Example of Better Comments extension.
- * ! Warning comment
- * ? Question
- * TODO: Add todo comments
- * @param props Document parama
+ * * Same modal component as /pages/index.js. Used for storybook example.
  */
 
 const Query = ({ courseID, professor, team, project }) => {
