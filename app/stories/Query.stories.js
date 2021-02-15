@@ -8,11 +8,11 @@ export default {
 };
 
 // template for passing props to storybook components
-const Story = (props) => <Query {...props} />;
+const QueryStory = (props) => <Query {...props} />;
 
 // example of passing props to storybook component
-export const Example1 = Story.bind({});
-NameCard.args = {
+export const Query1 = QueryStory.bind({});
+Query1.args = {
   courseID: "CS492",
   professor: "Cindric",
   team: "Silver Foxes",
@@ -20,8 +20,8 @@ NameCard.args = {
 };
 
 // example of passing props to storybook component
-export const Example2 = Story.bind({});
-NameCard.args = {
+export const Query2 = QueryStory.bind({});
+Query2.args = {
   courseID: "CS492",
   professor: "Foo",
   team: "Bar",
