@@ -1,2 +1,8 @@
-$body-bg: white;
+$primary: #802bb1;
+$secondary: #564f6f;
+$info: #4c495d;
+$light: #d1d7e0;
+$dark: #2d283e;
+
+$border-color: $info;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
