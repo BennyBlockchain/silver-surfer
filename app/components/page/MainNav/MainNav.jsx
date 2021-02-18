@@ -9,7 +9,7 @@ const MainNav = () => {
     <>
       <Navbar
         variant="dark"
-        bg="secondary"
+        bg="dark"
         fixed="top"
         className={`border-bottom d-none d-lg-flex justify-content-between ${styles.nav}`}
       >
