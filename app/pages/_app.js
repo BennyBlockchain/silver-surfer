@@ -1,3 +1,4 @@
+// Add Bootstrap, custom Bootstrap, and global css.
 import "../styles/globals.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/custom.scss";
