@@ -20,11 +20,11 @@ const MainNav = () => {
         </Link>
 
         <Nav className="d-flex">
-          <Nav.Link className={styles.link}>Ben</Nav.Link>
+          <Nav.Link className={styles.link}>Majors</Nav.Link>
 
-          <Nav.Link className={styles.link}>Ben</Nav.Link>
+          <Nav.Link className={styles.link}>Minors</Nav.Link>
 
-          <Nav.Link className={styles.link}>Ben</Nav.Link>
+          <Nav.Link className={styles.link}>Faculty</Nav.Link>
         </Nav>
       </Navbar>
       <Navbar
