@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./MainNav.module.scss";
-import { Navbar, Nav } from "react-bootstrap/";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
 import BBC from "../../../public/images/avatar.png";
 
 const MainNav = () => {
@@ -18,7 +18,6 @@ const MainNav = () => {
             Silver Surfer
           </Navbar.Brand>
         </Link>
-
         <Nav className="d-flex">
           <Nav.Link className={styles.link}>Majors</Nav.Link>
 
