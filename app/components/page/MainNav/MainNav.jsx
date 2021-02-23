@@ -15,7 +15,7 @@ const MainNav = () => {
       >
         <Link href="/" passHref>
           <Navbar.Brand className={`d-flex ${styles.brand}`}>
-            silver surfer
+            Silver Surfer
           </Navbar.Brand>
         </Link>
 
