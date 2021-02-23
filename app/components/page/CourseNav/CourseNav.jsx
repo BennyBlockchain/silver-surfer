@@ -50,6 +50,24 @@ const CourseNav = () => {
         >
           CSC 360
         </Button>
+        <Button
+          className="rounded-circle my-2 bg-info"
+          style={{ width: "100px", height: "80px" }}
+        >
+          CSW 103
+        </Button>
+        <Button
+          className="rounded-circle my-2 bg-info"
+          style={{ width: "100px", height: "80px" }}
+        >
+          CSW 113
+        </Button>
+        <Button
+          className="rounded-circle my-2 bg-info"
+          style={{ width: "100px", height: "80px" }}
+        >
+          CSW 423
+        </Button>
       </Container>
     </>
   );
