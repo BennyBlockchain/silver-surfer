@@ -9,10 +9,16 @@ const CourseNav = () => {
         style={{ width: 80 + "px", paddingTop: 50 + "px" }}
       >
         <Button
+        className="rounded-circle my-2 bg-info"
+        style={{ width: "60px", height: "60px" }}
+      >
+          120
+        </Button>
+        <Button
           className="rounded-circle my-2 bg-info"
           style={{ width: "60px", height: "60px" }}
         >
-          492
+          220
         </Button>
         <Button
           className="rounded-circle my-2 bg-info"
@@ -24,13 +30,25 @@ const CourseNav = () => {
           className="rounded-circle my-2 bg-info"
           style={{ width: "60px", height: "60px" }}
         >
-          360
+          320
         </Button>
         <Button
           className="rounded-circle my-2 bg-info"
           style={{ width: "60px", height: "60px" }}
         >
-          220
+          399
+        </Button>
+        <Button
+          className="rounded-circle my-2 bg-info"
+          style={{ width: "60px", height: "60px" }}
+        >
+          492
+        </Button>
+        <Button
+          className="rounded-circle my-2 bg-info"
+          style={{ width: "60px", height: "60px" }}
+        >
+          360
         </Button>
       </Container>
     </>
