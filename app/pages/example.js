@@ -69,8 +69,9 @@ export default function Home(props) {
 }
 
 export async function getServerSideProps(context) {
-  const { client, db, database } = await connectToDatabase();
+  const { client, db } = await connectToDatabase();
   const conn = await client.isConnected();
+  console.log(conn)
   const mongoCourse = await db
     .collection("CoursePage")
     .find({ courseID: "CS492" })
