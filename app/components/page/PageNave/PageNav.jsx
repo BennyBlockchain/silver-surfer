@@ -6,7 +6,7 @@ const PageNav = () => {
     <>
       <Container
         className="p-0 m-0 w-25 vh-100 position-fixed"
-        style={{ left: "80px" }}
+        style={{ left: "110px" }}
       >
         <a
           className="btn btn-primary p-0 text-dark bg-transparent border-0 position-fixed"
