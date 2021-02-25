@@ -1,6 +1,5 @@
-
 import { Modal, Button, Row } from "react-bootstrap";
-
+import styles from "../styles/Home.module.scss";
 
 
 export default function Home(props) { 
@@ -10,8 +9,8 @@ export default function Home(props) {
         <title>Silver Surfer</title>
     </head>
 
-    <Row>
-        <p> This is the Course page.</p>
+    <Row className="mx-0">
+    <p className={`${styles.text}`}>  This is the course page.</p>
     </Row>
    
     </> 
