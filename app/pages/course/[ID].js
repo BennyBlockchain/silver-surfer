@@ -1,6 +1,9 @@
 import { useRouter } from "next/router";
 
-export default function CoursePage() {
+const CoursePage = () => {
   const router = useRouter();
-  return <div>Course {router.query.id}</div>;
+  const { ID } = router.query
+  return <div>Course { ID } </div>;
 }
+
+export default CoursePage 
