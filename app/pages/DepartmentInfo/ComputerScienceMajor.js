@@ -2,7 +2,7 @@ import { Modal, Button, Row } from "react-bootstrap";
 import styles from "../../styles/Home.module.scss";
 
 
-export default function Course() { 
+export default function CompSci() { 
     return (
     <>
     <head>
