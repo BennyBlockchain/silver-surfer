@@ -1,4 +1,3 @@
-import { faHome } from "@fortawesome/free-solid-svg-icons";
 import {useRouter} from "next/router"; 
 
 const Course_Page_ID = "course/[ID]"; 
@@ -10,10 +9,30 @@ const course = [
     {
         id: 220, 
         title: "CSC 220"
+    },
+    {
+        id: 310, 
+        title: "CSC 310"
+    },
+    {
+        id: 320, 
+        title: "CSC 320"
+    },
+    {
+        id: 399, 
+        title: "CSC 399"
+    },
+    {
+        id: 492, 
+        title: "CSC 492"
+    },
+    {
+        id: 360, 
+        title: "CSC 360"
     }
 ];
 
-export default function Home() { 
+export default function CoursePage() { 
     const router = useRouter(); 
 
     const navigate = (ID) => 
