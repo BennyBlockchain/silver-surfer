@@ -1,25 +1,6 @@
-import { Modal, Button, Row } from "react-bootstrap";
-import styles from "../../styles/Home.module.scss";
+import { useRouter } from "next/router";
 
-
-export default function ID() { 
-    return (
-    
-        <p>ID page</p>
-   
-    );
-}
-
-export async function getStaticPaths() { 
-    return { 
-        paths: [
-            '/course/csc120.js', 
-            { params: {slug: 'csc120'}}
-        ],
-        fallback: true, 
-    }
-}
-
-export async function getStaticProps({params}) { 
-    
+export default function CoursePage() {
+  const router = useRouter();
+  return <div>Course {router.query.id}</div>;
 }
