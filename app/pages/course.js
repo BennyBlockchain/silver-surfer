@@ -1,4 +1,6 @@
 import {useRouter} from "next/router"; 
+import Main from "../layouts/Main/Main";
+import Head from "next/head";
 
 const Course_Page_ID = "course/[ID]"; 
 const course = [
@@ -43,14 +45,18 @@ export default function CoursePage() {
     
     return (
         <div>
+            <Head>
             <h1>Course Page</h1>
+            </Head>
 
             {course.map((course) => (
                 <div key={`course-${course.id}`}>
                     <button onClick={() => navigate(course.id)}>{course.title}</button>
             </div>
             ))}
+      
         </div>
+       
     )
 }
 
