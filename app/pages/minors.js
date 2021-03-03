@@ -7,8 +7,13 @@ export default function Home() {
     <>
       <Head>
         <title>Silver Surfer</title>
+        
       </Head>
+
+    
       <Main />
+
+      
     </>
   );
 }
