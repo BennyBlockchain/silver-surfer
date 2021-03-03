@@ -10,10 +10,10 @@ export default function Home() {
         
       </Head>
 
-  
+    
       <Main />
 
-      <Row>Majors</Row>
+      
     </>
   );
 }
