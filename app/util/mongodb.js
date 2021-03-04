@@ -1,5 +1,4 @@
 import { MongoClient } from "mongodb"; // MongoDB Node.js Driver
-import { MONGO_URI, DB_NAME } from "../config/mongo.config"; // Hidden uri link for cloud MongoDB instance
 
 /**
  * connectToDatabase() | Connect to silver-mongo utility
@@ -14,9 +13,9 @@ import { MONGO_URI, DB_NAME } from "../config/mongo.config"; // Hidden uri link 
  */
 
 // [0]
-if (!MONGO_URI || !DB_NAME) {
+if (!process.env.MONGO_URI || !process.env.DB_NAME) {
   throw new Error(
-    `No MongoDB connection link (${MONGO_URI}) or db name (${DB_NAME}) provided.`
+    `No MongoDB connection link (${process.env.MONGO_URI}) or db name (${process.env.DB_NAME}) provided.`
   );
 }
 
@@ -31,17 +30,13 @@ export async function connectToDatabase() {
   }
   // [2]
 
-    const client = await MongoClient.connect(MONGO_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-
-  
-  
-  
+  const client = await MongoClient.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  });
 
   // [3]
-  const db = await client.db(DB_NAME);
+  const db = await client.db(process.env.DB_NAME);
 
   // [1]
   cachedClient = client;
