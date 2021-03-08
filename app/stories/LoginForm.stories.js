@@ -3,7 +3,8 @@ import Form from "../components/DropdownMenu"; //import component
 
 // template for .storybook
 export default {
-  component: LoginForm,
+    Row: "test",
+    component: LoginForm,
 };
 
 // template for passing props to storybook components
