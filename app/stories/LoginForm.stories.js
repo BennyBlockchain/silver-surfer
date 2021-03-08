@@ -10,14 +10,14 @@ export default {
 const LoginFormStory = (props) => <LoginForm {...props} />;
 
 // example of passing props to storybook component
-export const DDM1 = LoginFormStory.bind({});
+export const LoginForm1 = LoginFormStory.bind({});
 LoginForm1.args = {
   //title: "Majors",
   //list: ["temp", "fake"],
 };
 
 // example of passing props to storybook component
-export const DDM2 = LoginFormStory.bind({});
+export const LoginForm1 = LoginFormStory.bind({});
 LoginForm2.args = {
   //title: "Minors",
   //list: ["trial", "error", "testing"],
