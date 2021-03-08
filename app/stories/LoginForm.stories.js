@@ -3,23 +3,22 @@ import Form from "../components/DropdownMenu"; //import component
 
 // template for .storybook
 export default {
-  title: "Dropdown Menu Example",
-  component: DropdownMenu,
+  component: LoginForm,
 };
 
 // template for passing props to storybook components
-const DropdownStory = (props) => <DropdownMenu {...props} />;
+const LoginFormStory = (props) => <LoginForm {...props} />;
 
 // example of passing props to storybook component
-export const DDM1 = DropdownStory.bind({});
-DDM1.args = {
-  title: "Majors",
+export const DDM1 = LoginFormStory.bind({});
+LoginForm1.args = {
+  //title: "Majors",
   //list: ["temp", "fake"],
 };
 
 // example of passing props to storybook component
-export const DDM2 = DropdownStory.bind({});
-DDM2.args = {
-  title: "Minors",
+export const DDM2 = LoginFormStory.bind({});
+LoginForm2.args = {
+  //title: "Minors",
   //list: ["trial", "error", "testing"],
 };
