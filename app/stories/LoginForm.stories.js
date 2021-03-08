@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../components/DropdownMenu"; //import component
+import Form from "../components/LoginForm"; //import component
 
 // template for .storybook
 export default {
