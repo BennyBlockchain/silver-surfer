@@ -1,8 +1,7 @@
 import {useRouter} from "next/router"; 
 import Main from "../layouts/Main/Main";
 import Head from "next/head";
-import { Button } from "react-bootstrap";
-import CourseNav from "../components/page/CourseNav/CourseNav";
+
 
 const Course_Page_ID = "course/[ID]"; 
 const course = [
