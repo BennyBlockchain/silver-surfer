@@ -3,7 +3,7 @@ import LoginForm from "../components/LoginForm"; //import component
 
 // template for .storybook
 export default {
-    Row: "test",
+    Title: "test",
     component: LoginForm,
 };
 
@@ -13,11 +13,11 @@ const LoginFormStory = (props) => <LoginForm {...props} />;
 // example of passing props to storybook component
 export const LoginForm1 = LoginFormStory.bind({});
 LoginForm1.args = {
-  Row: "test1",
+  Title: "test1",
 };
 
 // example of passing props to storybook component
 export const LoginForm1 = LoginFormStory.bind({});
 LoginForm2.args = {
-    Row: "test2",
+    Title: "test2",
 };

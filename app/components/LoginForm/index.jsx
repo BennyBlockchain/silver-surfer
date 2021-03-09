@@ -1,6 +1,6 @@
 import {Form} from "react-bootstrap";
 
-export default ({Row}) => { 
+export default () => { 
     return(
         <Form>
             <Form.Group as={Row} controlId="formHorizontalEmail">
