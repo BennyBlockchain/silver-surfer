@@ -1,6 +1,8 @@
 import {useRouter} from "next/router"; 
 import Main from "../layouts/Main/Main";
 import Head from "next/head";
+import { Button } from "react-bootstrap";
+import CourseNav from "../components/page/CourseNav/CourseNav";
 
 const Course_Page_ID = "course/[ID]"; 
 const course = [
@@ -49,13 +51,19 @@ export default function CoursePage() {
             <h1>Course Page</h1>
             </Head>
 
+        
             {course.map((course) => (
                 <div key={`course-${course.id}`}>
-                    <button onClick={() => navigate(course.id)}>{course.title}</button>
+                    <button 
+                    onClick={() => navigate(course.id)}>{course.title}
+                    </button>
+                
             </div>
             ))}
-      
+        
+           
         </div>
+       
        
     )
 }
