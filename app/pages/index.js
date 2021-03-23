@@ -3,7 +3,7 @@ import Main from "../layouts/Main/Main";
 
 export default function Home() {
   return (
-    <>
+    <div>
       <Head>
         <title>Silver Surfer</title>
       </Head>
@@ -34,6 +34,6 @@ export default function Home() {
       </Main>
 
 
-    </>
+    </div>
   );
 }

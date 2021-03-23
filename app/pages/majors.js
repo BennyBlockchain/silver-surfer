@@ -112,6 +112,7 @@ export default function Home() {
         strong liberal arts foundation, you will not only be technically prepared for your career, you also will be equipped with the effective communication
         and leadership skills valued in today's professional world. 
         <br /> 
+        <br /> 
 
       </Main>
 

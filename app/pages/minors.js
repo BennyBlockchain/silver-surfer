@@ -117,6 +117,9 @@ export default function Home() {
         Offering an integrated mix of visual design and computing design, the Web Design minor equips students with proficiency in applied, 
         computer-based, and visual problem solving, enabling them to perform creative work on the web. Upon completion of this minor, students 
         will be prepared to design and develop websites as communication tools for people to use and experience. 
+        <br /> 
+        <br /> 
+        <br /> 
 
       </Main>
 
