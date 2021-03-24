@@ -1,11 +1,11 @@
 import {Form} from "react-bootstrap";
 
-export default () => { 
+const LoginForm = (title) => { 
     return(
         <Form>
             <Form.Group as={Row} controlId="formHorizontalEmail">
                 <Form.Label column sm={2}>
-                Email
+                {title}
                 </Form.Label>
                 <Col sm={10}>
                     <Form.Control type="email" placeholder="Email" />
@@ -28,3 +28,4 @@ export default () => {
     );
     
 }
+export default LoginForm
