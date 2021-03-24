@@ -19,11 +19,11 @@ const MainNav = () => {
           </Navbar.Brand>
         </Link>
         <Nav className="d-flex">
-          <Nav.Link className={styles.link}>Majors</Nav.Link>
+          <Nav.Link href="/majors" className={styles.link}>Majors</Nav.Link>
 
-          <Nav.Link className={styles.link}>Minors</Nav.Link>
+          <Nav.Link href="/minors" className={styles.link}>Minors</Nav.Link>
 
-          <Nav.Link className={styles.link}>Faculty</Nav.Link>
+          <Nav.Link href="/faculty" className={styles.link}>Faculty</Nav.Link>
         </Nav>
       </Navbar>
       <Navbar
