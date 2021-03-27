@@ -1,6 +1,6 @@
-import Card from "react-bootstrap";
+import {Card} from "react-bootstrap";
 
-const FacultyCard = ({ title, text }) => {
+const FacultyCard = ({title, text}) => {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />
@@ -9,5 +9,7 @@ const FacultyCard = ({ title, text }) => {
         <Card.Text>{text}</Card.Text>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
+
+export default FacultyCard;

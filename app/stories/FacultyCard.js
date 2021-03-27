@@ -1,13 +1,14 @@
 import React from "react";
-import FacultyCard from "../components/FacultyCard/index.jsx"; //import component
+import FacultyCard from "../components/FacultyCard/index"; //import component
 
 export default {
-    title: "Faculty Card Example",
+    title: "Faculty Card",
+    text: "card",
     component: FacultyCard,
   };
   
   // template for passing props to storybook components
-  const FacultyCardStory = (props) => <FacultyCard {...props} />;
+  const FacultyCardStory = (props) => <Card {...props} />;
   
   // example of passing props to storybook component
   export const FacultyCard1 = FacultyCardStory.bind({});

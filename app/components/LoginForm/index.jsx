@@ -3,7 +3,7 @@ import {Form} from "react-bootstrap";
 const LoginForm = (title) => { 
     return(
         <Form>
-            <Form.Group as={Row} controlId="formHorizontalEmail">
+            <Form.Group as={title} controlId="formHorizontalEmail">
                 <Form.Label column sm={2}>
                 {title}
                 </Form.Label>
@@ -12,7 +12,7 @@ const LoginForm = (title) => {
                 </Col>
             </Form.Group>
 
-            <Form.Group as={Row} controlId="formHorizontalPassword">
+            <Form.Group as={title} controlId="formHorizontalPassword">
                 <Form.Label column sm={2}>
                     Password
                 </Form.Label>
