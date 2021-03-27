@@ -27,36 +27,32 @@ const MainNav = () => {
         </Nav>
       </Navbar>
       <Navbar
-        variant="light"
-        bg="light"
+        variant="dark"
+        bg="dark"
         fixed="top"
         className={`border-bottom d-flex d-lg-none ${styles.navMobileTop}`}
       >
         <Link href="/" passHref>
-          <Navbar.Brand className={`${styles.brand}`}>Schroth</Navbar.Brand>
+          <Navbar.Brand className={`${styles.brand}`}>Silver Surfer</Navbar.Brand>
         </Link>
 
         <Navbar.Collapse id="styng-nav" className="justify-content-end">
           <Nav className="d-flex">
-            <Link href="/messages" passHref>
-              <Nav.Link className={styles.link}>Silver</Nav.Link>
+            <Link href="/majors" passHref>
+              <Nav.Link className={styles.link}>Majors</Nav.Link>
             </Link>
-            <Link href="/notifications" passHref>
-              <Nav.Link className={styles.link}>Surfer</Nav.Link>
+            <Link href="/minors" passHref>
+              <Nav.Link className={styles.link}>Minors</Nav.Link>
+            </Link>
+            <Link href="/faculty" passHref>
+              <Nav.Link className={styles.link}>Faculty</Nav.Link>
             </Link>
 
-            <Nav.Link className={`p-0 ${styles.profile}`}>
-              <Image
-                height={32}
-                width={32}
-                src={BBC}
-                className="rounded-circle"
-              />
-            </Nav.Link>
+            
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Navbar
+      {/*<Navbar
         variant="light"
         bg="light"
         fixed="bottom"
@@ -75,7 +71,7 @@ const MainNav = () => {
         <Link href="/#" passHref>
           <a className={styles.bottomnav}>mount</a>
         </Link>
-      </Navbar>
+      </Navbar>*/}
     </>
   );
 };
