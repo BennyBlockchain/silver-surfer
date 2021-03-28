@@ -17,6 +17,7 @@
     "jquery": "^3.5.1",
     "mongodb": "^3.6.4",
     "next": "10.0.6",
+    "next-auth": "^3.6.1",
     "next-images": "^1.7.0",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.3",
