@@ -19,7 +19,7 @@ export default {
     title: "Suffering",
     dueDate: "March 31st, 2021",
     desc: "Life is pain.",
-    //link: "https://youtu.be/XqXckRwf6Ec",
+    link: "https://youtu.be/XqXckRwf6Ec",
     linkTitle: "Test Link Here",
   };
 
@@ -30,6 +30,6 @@ export default {
     title: "Anger",
     dueDate: "March 31st, 2021",
     desc: "My sister ate my cheetos.",
-    //link: "https://youtu.be/XqXckRwf6Ec",
+    link: "https://youtu.be/sW5wRxIPgcA",
     linkTitle: "Test Link Here",
   };
