@@ -1,8 +1,8 @@
 import React from "react";
 import AssignmentCard from "../components/AssignmentCard/index.jsx"; //import component
 //import images:
-import scream from "../assignment_images/suffering.png"
-import kermit from "../assignment_images/kermitNo.png"
+import test1 from "../assignment_images/test1.jpeg"
+import test2 from "../assignment_images/test2.jpeg"
 
 export default {
     title: "Assignment Card",
@@ -13,23 +13,23 @@ export default {
   const AssignmentCardStory = (props) => <AssignmentCard {...props} />;
 
   // Test:
-  export const Scream = AssignmentCardStory.bind({});
-  Scream.args = {
-    imageName: scream,
-    title: "Suffering",
+  export const Test1 = AssignmentCardStory.bind({});
+  Test1.args = {
+    imageName: test1,
+    title: "Test 1",
     dueDate: "March 31st, 2021",
-    desc: "Life is pain.",
-    link: "https://youtu.be/XqXckRwf6Ec",
-    linkTitle: "Test Link Here",
+    desc: "Link to current students page.",
+    link: "https://www.mountunion.edu/current-students",
+    linkTitle: "Current UMU Students",
   };
 
   // Test 2:
-  export const Kermit = AssignmentCardStory.bind({});
-  Kermit.args = {
-    imageName: kermit,
-    title: "Anger",
+  export const Test2 = AssignmentCardStory.bind({});
+  Test2.args = {
+    imageName: test2,
+    title: "Test 2",
     dueDate: "March 31st, 2021",
-    desc: "My sister ate my cheetos.",
-    link: "https://youtu.be/sW5wRxIPgcA",
-    linkTitle: "Test Link Here",
+    desc: "Link to library page.",
+    link: "https://www.mountunion.edu/current-students",
+    linkTitle: "UMU Library",
   };
