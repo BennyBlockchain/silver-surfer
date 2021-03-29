@@ -52,26 +52,7 @@ const MainNav = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      {/*<Navbar
-        variant="light"
-        bg="light"
-        fixed="bottom"
-        className={`border-top p-0 d-flex d-lg-none justify-content-between align-items-center ${styles.navMobileBottom}`}
-      >
-        <Link href="/#" passHref active>
-          <a className={styles.bottomnav}>nav</a>
-        </Link>
-        <Link href="/#" passHref>
-          <a className={styles.bottomnav}>navabr</a>
-        </Link>
-
-        <Link href="/#" passHref>
-          <a className={styles.bottomnav}>cs</a>
-        </Link>
-        <Link href="/#" passHref>
-          <a className={styles.bottomnav}>mount</a>
-        </Link>
-      </Navbar>*/}
+     
     </>
   );
 };
