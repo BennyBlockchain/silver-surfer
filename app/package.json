@@ -13,15 +13,17 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "jquery": "^3.5.1",
-    "mongodb": "^3.6.4",
+    "mongoose": "^5.12.2",
     "next": "10.0.6",
     "next-auth": "^3.6.1",
     "next-images": "^1.7.0",
     "react": "^16.14.0",
     "react-bootstrap": "^1.4.3",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "swr": "^0.5.4"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
