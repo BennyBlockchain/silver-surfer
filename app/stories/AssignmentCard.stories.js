@@ -12,12 +12,15 @@ export default {
   // template for passing props to storybook components
   const AssignmentCardStory = (props) => <AssignmentCard {...props} />;
 
-  // Test:
+  // Test 1:
   export const Test1 = AssignmentCardStory.bind({});
   Test1.args = {
     imageName: test1,
     title: "Test 1",
-    dueDate: "March 31st, 2021",
+    dueMonth: "March",
+    dueDate: "31st",
+    dueTime: "3:40",
+    dayOrNight: "PM",
     desc: "Link to current students page.",
     link: "https://www.mountunion.edu/current-students",
     linkTitle: "Current UMU Students",
@@ -28,7 +31,10 @@ export default {
   Test2.args = {
     imageName: test2,
     title: "Test 2",
-    dueDate: "March 31st, 2021",
+    dueMonth: "March",
+    dueDate: "31st",
+    dueTime: "3:40",
+    dayOrNight: "PM",
     desc: "Link to library page.",
     link: "https://www.mountunion.edu/current-students",
     linkTitle: "UMU Library",
