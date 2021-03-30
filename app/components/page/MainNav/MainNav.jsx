@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./MainNav.module.scss";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap/";
+import { Navbar, Nav} from "react-bootstrap/";
 import BBC from "../../../public/images/avatar.png";
+
 
 const MainNav = () => {
   return (
