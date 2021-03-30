@@ -11,13 +11,7 @@ import Weber from "../professor_images/weberk.jpg";
 
 
 export default function FacultyPage() { 
-    const router = useRouter(); 
-
-    const navigate = (name) => 
-        router.push({
-            pathname: Faculty_Member_Name,
-            query: {name}
-        }); 
+    
     
     return (
         <div>
