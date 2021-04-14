@@ -3,6 +3,7 @@ import Head from "next/head";
 import Login from "../../components/Login";
 import MainNav from "../../components/page/MainNav/MainNav";
 import {Container, Row, Col, Button} from "react-bootstrap"; 
+import React, {useState} from 'react'; 
 
 
 
@@ -15,8 +16,16 @@ import {Container, Row, Col, Button} from "react-bootstrap";
 export default function admin() {
   // Hook for getting session info
   const [session, loading] = useSession();
+  const [fileUploadActive, setFileUploadActive] = useState(false);
+  const [scheduleChangeActive, setScheduleChangeActive] = useState(false); 
+  const [homeworkChangeActive, setHomeworkChangeActive] = useState(false); 
+  const [labChangeActive, setLabChangeActive] = useState(false); 
+  const [resourceChangeActive, setResourceChangeActive] = useState(false); 
+
   // SSR check for session
   if (typeof window !== "undefined" && loading) return null;
+
+  
 
   return (
     <>
@@ -46,31 +55,109 @@ export default function admin() {
       <Container> 
         <Row>
           <Col>
-          <Button variant="dark">Syllabus</Button>
+          <Button variant="dark" onClick={() => setFileUploadActive(true)}>Syllabus</Button>
+          
+          </Col>
+          <Col>
+          {fileUploadActive && <input type="file"/>}
+          <br/> 
+          <br/> 
+          {scheduleChangeActive && <form>
+            <label>
+              Title:
+            </label>
+            <input type="text"></input>
+            <br/>
+            <label>
+              Date:
+            </label>
+            <input type="text"></input>
+            <br/> 
+            <label>
+              Description: 
+            </label>
+            <input type="textarea"></input>
+            </form>}
+            <br/> 
+          {homeworkChangeActive && <form>
+            <label>
+              Title:
+            </label>
+            <input type="text"></input>
+            <br/>
+            <label>
+              Date:
+            </label>
+            <input type="text"></input>
+            <br/> 
+            <label>
+              Description: 
+            </label>
+            <input type="textarea"></input>
+            </form>}
+            <br/> 
+            {labChangeActive && <form>
+            <label>
+              Title:
+            </label>
+            <input type="text"></input>
+            <br/>
+            <label>
+              Date:
+            </label>
+            <input type="text"></input>
+            <br/> 
+            <label>
+              Description: 
+            </label>
+            <input type="textarea"></input>
+            </form>}
+            <br/> 
+            {resourceChangeActive && <form>
+            <label>
+              Title:
+            </label>
+            <input type="text"></input>
+            <br/>
+            <label>
+              Date:
+            </label>
+            <input type="text"></input>
+            <br/> 
+            <label>
+              Description: 
+            </label>
+            <input type="textarea"></input>
+            <br/> 
+            <label>
+              Links: 
+            </label>
+            <input type="text"></input>
+            </form>}
           </Col>
         </Row>
-        <br /> 
+
         <Row>
           <Col>
-          <Button variant="dark">Schedule Updates</Button>
+          <Button variant="dark" onClick={() => setScheduleChangeActive(true)}>Schedule Updates</Button>
           </Col>
         </Row>
-        <br /> 
+        <br/> 
         <Row> 
           <Col>
-          <Button variant="dark">Homework Assignment</Button>
+          <Button variant="dark" onClick={() => setHomeworkChangeActive(true)}>Homework Assignment</Button>
           </Col>
         </Row>
-        <br /> 
+        <br/> 
         <Row> 
           <Col>
-          <Button variant="dark">Lab Assignments</Button>
+          <Button variant="dark" onClick={() => setLabChangeActive(true)}>Lab Assignments</Button>
           </Col>
         </Row>
-        <br /> 
+        <br/> 
         <Row> 
           <Col>
-          <Button variant="dark">Course Resources</Button>
+          <Button variant="dark" onClick={() => setResourceChangeActive(true)}>Course Resources</Button>
           </Col>
         </Row>
 
