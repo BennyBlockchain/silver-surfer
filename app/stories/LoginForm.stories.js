@@ -3,7 +3,7 @@ import LoginForm from "../components/LoginForm"; //import component
 
 // template for .storybook
 export default {
-  title: "Login Form Example",
+  title: "Login Form",
   component: LoginForm,
 };
 
