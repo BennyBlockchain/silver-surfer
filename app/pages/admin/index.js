@@ -1,6 +1,7 @@
 import { useSession } from "next-auth/client"; // Get session from provider (ref /pages/_app.js)
 import Head from "next/head";
 import Login from "../../components/Login";
+import LoginForm from "../../components/LoginForm";
 
 /**
  * * If user is not signed in, return the login page.
@@ -18,6 +19,11 @@ export default function admin() {
       <Head>
         <title>Admin | Silver Surfer</title>
       </Head>
+
+      TODO: Put login react component here.
+
+      <br />
+
       {!session && (
         <>
           <Login />
