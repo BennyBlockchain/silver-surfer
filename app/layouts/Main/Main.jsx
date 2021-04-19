@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
-import MainNav from "../../components/page/MainNav/MainNav";
-import CourseNav from "../../components/page/CourseNav/CourseNav";
-import PageNav from "../../components/page/PageNave/PageNav";
+import MainNav from "../page/MainNav/MainNav";
+import CourseNav from "../page/CourseNav/CourseNav";
+import PageNav from "../page/PageNave/PageNav";
 const Main = ({ children }) => {
   return (
     <>
