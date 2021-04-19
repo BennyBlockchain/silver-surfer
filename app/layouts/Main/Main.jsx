@@ -7,9 +7,15 @@ const Main = ({ children }) => {
     <>
       <Container fluid className="d-flex bg-light vw-100 h-100 m-0 p-0">
         <CourseNav />
-        <PageNav />
+        {/* <PageNav /> */}
         <MainNav />
-        <Container className="mt-5 px-5 p-0">{children}</Container>
+        <Container
+          className="mt-5 p-0"
+          style={{ marginLeft: "110px", marginRight: "0px" }}
+          fluid
+        >
+          {children}
+        </Container>
       </Container>
     </>
   );
