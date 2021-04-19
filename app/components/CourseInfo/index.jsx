@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
 const CourseInfo = ({ title, about, course_id }) => {
   return (
