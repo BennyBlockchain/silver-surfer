@@ -31,9 +31,13 @@ const CoursePage = () => {
               about={course.about}
             />
             <div className="d-flex flex-wrap">
-              <Link href={`${course_id}/syllabus`} passHref>
+              <Link
+                href={`https://stluciadance.com/prospectus_file/sample.pdf`}
+                passHref
+              >
                 <Button
                   size="lg"
+                  target="_blank"
                   variant="outline-primary"
                   className="border-outline p-4 my-2"
                   style={{ width: "50%" }}
