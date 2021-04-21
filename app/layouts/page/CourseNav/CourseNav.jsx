@@ -15,11 +15,11 @@ const CourseNav = () => {
         style={{ width: 110 + "px", paddingTop: 50 + "px" }}
       >
         {data &&
-          data.map((course) => {
+          data.map((course, index) => {
             return (
-              <Link href={`/course/${course.course_id}`}>
+              <Link href={`/course/${course.course_id}`} key={index}>
                 <Button
-                  className="rounded-circle my-2 bg-info"
+                  className="rounded-circle bg-info mt-2"
                   style={{ width: "100px", height: "100px" }}
                 >
                   {"CS" + course.course_id}

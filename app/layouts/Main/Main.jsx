@@ -10,7 +10,7 @@ const Main = ({ children }) => {
         {/* <PageNav /> */}
         <MainNav />
         <Container
-          className="mt-5 p-0"
+          className="mt-5 py-0 px-3"
           style={{ marginLeft: "110px", marginRight: "0px" }}
           fluid
         >
