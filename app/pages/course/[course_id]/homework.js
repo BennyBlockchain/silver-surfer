@@ -1,0 +1,40 @@
+import Main from "../../../layouts/Main/Main";
+import { useRouter } from "next/router";
+import { useState } from "react";
+
+import AssignmentCard from "../../../components/AssignmentCard";
+import axios from "axios";
+import useSWR from "swr";
+const homework = () => {
+  // Get data
+  // Perform get request function
+  const fetcher = (url) => axios.get(url).then((r) => r.data);
+  const router = useRouter();
+  const courseId = router.query.course_id;
+  // Homework info
+  const [homework, setHomework] = useState();
+
+  // Gets the courses from DB
+  const { data, error } = useSWR("/api/courses", fetcher);
+
+  // Gets the homework data and set to homework state
+  if (data && !homework) {
+    data.map((courseCall) => {
+      if (courseCall.course_id === courseId) {
+        setHomework(courseCall.homework);
+      }
+    });
+  }
+  return (
+    <Main>
+      {homework &&
+        homework.map((hw) => {
+          return (
+            <AssignmentCard title={hw.title} dueDate={hw.date} link={hw.link} />
+          );
+        })}
+    </Main>
+  );
+};
+
+export default homework;

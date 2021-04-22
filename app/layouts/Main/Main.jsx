@@ -1,15 +1,21 @@
 import { Container } from "react-bootstrap";
-import MainNav from "../../components/page/MainNav/MainNav";
-import CourseNav from "../../components/page/CourseNav/CourseNav";
-import PageNav from "../../components/page/PageNave/PageNav";
+import MainNav from "../page/MainNav/MainNav";
+import CourseNav from "../page/CourseNav/CourseNav";
+import PageNav from "../page/PageNave/PageNav";
 const Main = ({ children }) => {
   return (
     <>
-      <Container fluid className="d-flex bg-light vw-100 h-100 m-0 p-0">
+      <Container fluid className="d-flex bg-light vw-100 vh-100 m-0 p-0">
         <CourseNav />
-        <PageNav />
+        {/* <PageNav /> */}
         <MainNav />
-        <Container className="mt-5 px-5 p-0">{children}</Container>
+        <Container
+          className="mt-5 py-0 px-3"
+          style={{ marginLeft: "110px", marginRight: "0px" }}
+          fluid
+        >
+          {children}
+        </Container>
       </Container>
     </>
   );

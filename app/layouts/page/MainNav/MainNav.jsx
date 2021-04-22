@@ -1,9 +1,6 @@
 import Link from "next/link";
-import Image from "next/image";
 import styles from "./MainNav.module.scss";
-import { Navbar, Nav} from "react-bootstrap/";
-import BBC from "../../../public/images/avatar.png";
-
+import { Navbar, Nav } from "react-bootstrap/";
 
 const MainNav = () => {
   return (
@@ -20,21 +17,29 @@ const MainNav = () => {
           </Navbar.Brand>
         </Link>
         <Nav className="d-flex">
-          <Nav.Link href="/majors" className={styles.link}>Majors</Nav.Link>
+          <Nav.Link href="/majors" className={styles.link}>
+            Majors
+          </Nav.Link>
 
-          <Nav.Link href="/minors" className={styles.link}>Minors</Nav.Link>
+          <Nav.Link href="/minors" className={styles.link}>
+            Minors
+          </Nav.Link>
 
-          <Nav.Link href="/faculty" className={styles.link}>Faculty</Nav.Link>
+          <Nav.Link href="/faculty" className={styles.link}>
+            Faculty
+          </Nav.Link>
         </Nav>
       </Navbar>
       <Navbar
         variant="dark"
         bg="dark"
         fixed="top"
-        className={`border-bottom d-flex d-lg-none ${styles.navMobileTop}`}
+        className={`border-bottom d-flex d-lg-none py-1 ${styles.navMobileTop}`}
       >
         <Link href="/" passHref>
-          <Navbar.Brand className={`${styles.brand}`}>Silver Surfer</Navbar.Brand>
+          <Navbar.Brand className={`${styles.brand}`}>
+            Silver Surfer
+          </Navbar.Brand>
         </Link>
 
         <Navbar.Collapse id="styng-nav" className="justify-content-end">
@@ -48,12 +53,9 @@ const MainNav = () => {
             <Link href="/faculty" passHref>
               <Nav.Link className={styles.link}>Faculty</Nav.Link>
             </Link>
-
-            
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-     
     </>
   );
 };
