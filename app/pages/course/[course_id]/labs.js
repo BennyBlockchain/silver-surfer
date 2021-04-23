@@ -12,7 +12,7 @@ const labs = () => {
   const { data, error } = useSWR("/api/courses", fetcher);
   if (data && !labs) {
     data.map((courseCall) => {
-      if (courseCall.course_id === courseId) {
+      if (courseCall.course_number === courseId) {
         setLabs(courseCall.labs);
       }
     });
