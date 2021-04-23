@@ -22,7 +22,7 @@ const CourseNav = () => {
                   className="rounded-circle my-2 bg-info"
                   style={{ width: "100px", height: "100px" }}
                 >
-                  {"CS" + course.course_id}
+                  {"CSC" + course.course_id}
                 </Button>
               </Link>
             );

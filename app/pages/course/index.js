@@ -1,6 +1,7 @@
 import Head from "next/head";
 import useSWR from "swr";
 import axios from "axios";
+import { Container, Row, Col } from "react-bootstrap";
 
 const fetcher = (url) => axios.get(url).then((resp) => resp.json());
 
@@ -11,6 +12,7 @@ export default function CoursePage() {
       <Head>
         <title>Course Page</title>
       </Head>
+        
       {data &&
         data.map((course) => (
           <Link
@@ -25,7 +27,10 @@ export default function CoursePage() {
               {course.course_number}
             </Button>
           </Link>
+        
         ))}
+       
+        <br /> 
     </>
   );
 }
