@@ -2,18 +2,16 @@ import connectDB from "../../../mongodb/index";
 import Courses from "../../../mongodb/models/Courses";
 
 const handler = (req, res) => {
-  const { newCourse } = req.body;
-  console.log(newCourse);
+  const { id, data } = req.body;
+  const query = { _id: id };
   return new Promise((resolve, reject) => {
-    Courses.create(newCourse, function (err, doc) {
+    Courses.findOneAndUpdate(query, data, function (err, doc) {
       if (err) {
         reject;
-        console.log(err);
-        return res.status(500).json({ error: err });
+        return res.send(500, { error: err });
       } else {
         resolve;
-
-        return res.json({ saved: doc });
+        return res.send("Succesfully saved.", doc);
       }
     });
   });
