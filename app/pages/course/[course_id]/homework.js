@@ -21,7 +21,7 @@ const homework = () => {
   // Gets the homework data and set to homework state
   if (data && !homework) {
     data.map((courseCall) => {
-      if (courseCall.course_id === courseId) {
+      if (courseCall.course_number === courseId) {
         setHomework(courseCall.homework);
       }
     });
