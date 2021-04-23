@@ -7,7 +7,6 @@ import { useState } from "react";
 
 const schedule = () => {
   const [schedule, setSchedule] = useState();
-  const parsedEvent = [{ text: "Lab", start: "2021-4-28", end: "2021-4-29" }];
   const router = useRouter();
   const courseId = router.query.course_id;
 
@@ -16,15 +15,14 @@ const schedule = () => {
 
   if (data && !schedule) {
     data.map((courseCall) => {
-      if (courseCall.course_id === courseId) {
-        setSchedule(courseCall.scheudle);
+      if (courseCall.course_number === courseId) {
+        setSchedule(courseCall.schedule);
       }
     });
   }
   if (error) {
     alert("Error! W/ data " + error);
   }
-  if (schedule) console.log(schedule);
   return (
     <Main>
       <Container fluid>{schedule && <h1>hey</h1>}</Container>
@@ -33,4 +31,3 @@ const schedule = () => {
 };
 
 export default schedule;
-// /Volumes/Mount Union/CS492/silver-surfer/calendar

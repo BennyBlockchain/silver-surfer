@@ -11,18 +11,24 @@ const CourseNav = () => {
     <>
       <Container
         fluid
-        className="h-100 m-0 px-0 bg-secondary d-flex flex-column align-items-center position-fixed"
-        style={{ width: 110 + "px", paddingTop: 50 + "px" }}
+        className="m-0 px-0 vh-100 bg-secondary d-flex flex-column align-items-center position-fixed"
+        style={{
+          width: 110 + "px",
+          paddingTop: 50 + "px",
+        }}
       >
         {data &&
           data.map((course, index) => {
             return (
-              <Link href={`/course/${course.course_id}`} key={index}>
+              <Link href={`/course/${course.course_number}`} key={index}>
                 <Button
                   className="rounded-circle bg-info mt-2"
-                  style={{ width: "100px", height: "100px" }}
+                  style={{
+                    width: "100px",
+                    height: "100px",
+                  }}
                 >
-                  {"CS" + course.course_id}
+                  {"CS" + course.course_number}
                 </Button>
               </Link>
             );

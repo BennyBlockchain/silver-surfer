@@ -13,11 +13,11 @@ const CoursePage = () => {
   const [courses, error] = useCourses();
 
   if (courses && !course) {
-    let course = courses.filter((course) => course.course_id === course_id);
+    let course = courses.filter((course) => course.course_number === course_id);
     setCourse(course[0]);
   }
-  if (course && course_id !== course.course_id) {
-    let course = courses.filter((course) => course.course_id === course_id);
+  if (course && course_id !== course.course_number) {
+    let course = courses.filter((course) => course.course_number === course_id);
     setCourse(course[0]);
   }
   return (
@@ -26,8 +26,8 @@ const CoursePage = () => {
         {course && (
           <>
             <CourseInfo
-              course_id={course.course_id}
-              title={course.course}
+              course_id={course.course_number}
+              title={course.course_name}
               about={course.about}
             />
             <div className="d-flex flex-wrap">
