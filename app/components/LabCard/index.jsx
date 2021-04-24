@@ -1,7 +1,7 @@
 import {Card} from "react-bootstrap";
 
 
-const AssignmentCard = ({title, dueMonth, dueDate, dueTime, dayOrNight, desc, link, linkTitle}) => {
+const LabCard = ({title, dueMonth, dueDate, dueTime, dayOrNight, desc, link, linkTitle}) => {
   return (
     <Card style={{ width: '18rem' }}>
       <Card.Body>
@@ -14,4 +14,4 @@ const AssignmentCard = ({title, dueMonth, dueDate, dueTime, dayOrNight, desc, li
   );
 };
 
-export default AssignmentCard;
+export default LabCard;

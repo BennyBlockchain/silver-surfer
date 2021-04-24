@@ -1,8 +1,5 @@
 import React from "react";
 import AssignmentCard from "../components/AssignmentCard/index.jsx"; //import component
-//import images:
-import test1 from "../assignment_images/test1.jpeg"
-import test2 from "../assignment_images/test2.jpeg"
 
 export default {
     title: "Assignment Card",
@@ -15,8 +12,7 @@ export default {
   // Test 1:
   export const Test1 = AssignmentCardStory.bind({});
   Test1.args = {
-    imageName: test1,
-    title: "Test 1",
+    title: "Assignment Test 1",
     dueMonth: "March",
     dueDate: "31st",
     dueTime: "3:40",
@@ -29,13 +25,12 @@ export default {
   // Test 2:
   export const Test2 = AssignmentCardStory.bind({});
   Test2.args = {
-    imageName: test2,
-    title: "Test 2",
+    title: "Assignment Test 2",
     dueMonth: "March",
     dueDate: "31st",
     dueTime: "3:40",
     dayOrNight: "PM",
     desc: "Link to library page.",
-    link: "https://www.mountunion.edu/current-students",
+    link: "https://www.mountunion.edu/library",
     linkTitle: "UMU Library",
   };
