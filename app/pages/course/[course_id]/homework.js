@@ -42,7 +42,7 @@ const homework = () => {
       <br /> 
    
       <CardColumns
-      column-count="3"
+      
       >
       {homework &&
         homework.map((hw) => {
