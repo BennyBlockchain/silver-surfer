@@ -1,6 +1,5 @@
 import { useSession } from "next-auth/client"; // Get session from provider (ref /pages/_app.js)
 import Head from "next/head";
-import Login from "../../components/Login";
 import MainNav from "../../layouts/page/MainNav/MainNav";
 import {
   Container,
@@ -231,17 +230,6 @@ export default function create() {
       <Head>
         <title>Create a Course</title>
       </Head>
-      {/* {!session && (
-        <>
-          <Login />
-        </>
-      )} */}
-      {/* {loading && <h1>Loading...</h1>} */}
-      {session && (
-        <>
-          <h1>{`Session token: ${JSON.stringify(session.user)}`}</h1>
-        </>
-      )}
 
       <Container className="pt-5" fluid>
         <h1 className="py-2 m-0 text-center">Administrative Page</h1>
