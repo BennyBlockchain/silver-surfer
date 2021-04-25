@@ -1,26 +1,18 @@
 import { Card } from "react-bootstrap";
+import Link from "next/link";
 
-const AssignmentCard = ({
-  imageName,
-  title,
-  dueMonth,
-  dueDate,
-  dueTime,
-  dayOrNight,
-  desc,
-  link,
-  linkTitle,
-}) => {
+const AssignmentCard = ({ title, desc, link, imageUrl }) => {
   return (
     <Card style={{ width: "18rem" }}>
-      <Card.Img variant="top" src={imageName} />
+      <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>
-          Due Date: {dueMonth} {dueDate} at {dueTime} {dayOrNight}
-        </Card.Text>
+
         <Card.Text>Description: {desc}</Card.Text>
-        <Card.Link href={link}>{linkTitle}</Card.Link>
+        <Link href={link} passHref>
+          <a>Homework Resource</a>
+        </Link>
+        <Card.Link href={link}></Card.Link>
       </Card.Body>
     </Card>
   );
