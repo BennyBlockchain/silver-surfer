@@ -2,10 +2,10 @@ import connectDB from "../../../mongodb/index";
 import Courses from "../../../mongodb/models/Courses";
 
 const handler = (req, res) => {
-  const { id } = req.query;
+  const { prof } = req.query;
 
   return new Promise((resolve, reject) => {
-    Courses.find({})
+    Courses.find({ professor: prof })
       .then((resp) => {
         console.log(resp[0]);
         res.send(resp);
