@@ -1,6 +1,7 @@
 import { useSession } from "next-auth/client"; // Get session from provider (ref /pages/_app.js)
 import Head from "next/head";
 import Login from "../../components/Login";
+
 import MainNav from "../../layouts/page/MainNav/MainNav";
 import { Container, Button } from "react-bootstrap";
 import Link from "next/link";
@@ -8,6 +9,7 @@ import React, { useState } from "react";
 import { signOut } from "next-auth/client";
 import axios from "axios";
 import ProfessorCourses from "../../components/ProfessorCourses";
+
 /**
  * * If user is not signed in, return the login page.
  * * If user IS signed in, return the admin page.
