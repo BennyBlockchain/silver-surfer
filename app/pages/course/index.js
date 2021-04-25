@@ -11,8 +11,9 @@ export default function CoursePage() {
     <>
       <Head>
         <title>Course Page</title>
-      </Head>
         
+      </Head>
+    
       {data &&
         data.map((course) => (
           <Link

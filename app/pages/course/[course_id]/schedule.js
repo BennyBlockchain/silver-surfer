@@ -25,6 +25,10 @@ const schedule = () => {
   }
   return (
     <Main>
+      <br /> 
+      <center> 
+        <h2>Course Schedule</h2>
+      </center>
       <Container fluid>{schedule && <h1>hey</h1>}</Container>
     </Main>
   );
