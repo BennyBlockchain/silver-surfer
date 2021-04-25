@@ -40,7 +40,10 @@ const homework = () => {
       </center>
       <br /> 
       <br /> 
-      <CardColumns>
+   
+      <CardColumns
+      column-count="3"
+      >
       {homework &&
         homework.map((hw) => {
           return (
@@ -52,7 +55,7 @@ const homework = () => {
             />
           );
         })}
-        </CardColumns>  
+        </CardColumns>
         <br /> 
     </Main>
   );
