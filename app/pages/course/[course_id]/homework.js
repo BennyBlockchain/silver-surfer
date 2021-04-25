@@ -30,7 +30,12 @@ const homework = () => {
       {homework &&
         homework.map((hw) => {
           return (
-            <AssignmentCard title={hw.title} dueDate={hw.date} link={hw.link} />
+            <AssignmentCard
+              title={hw.title}
+              dueDate={hw.date}
+              link={hw.resourceUrl}
+              imageUrl={hw.imageUrl}
+            />
           );
         })}
     </Main>
