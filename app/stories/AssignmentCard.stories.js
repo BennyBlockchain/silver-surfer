@@ -12,7 +12,9 @@ export default {
   // Test 1:
   export const Test1 = AssignmentCardStory.bind({});
   Test1.args = {
+
     title: "Assignment Test 1",
+
     dueMonth: "March",
     dueDate: "31st",
     dueTime: "3:40",
@@ -25,12 +27,16 @@ export default {
   // Test 2:
   export const Test2 = AssignmentCardStory.bind({});
   Test2.args = {
+
     title: "Assignment Test 2",
+
     dueMonth: "March",
     dueDate: "31st",
     dueTime: "3:40",
     dayOrNight: "PM",
     desc: "Link to library page.",
+
     link: "https://www.mountunion.edu/library",
+
     linkTitle: "UMU Library",
   };
