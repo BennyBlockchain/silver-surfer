@@ -18,7 +18,15 @@ const labs = () => {
     });
   }
   if (labs) console.log(labs);
-  return <Main>{labs && <h1>{JSON.stringify(labs[0])}</h1>}</Main>;
+  return ( 
+  <Main>
+    <br /> 
+    <center>
+    <h2>Lab Assignments</h2>  
+    </center> 
+    {labs && <h1>{JSON.stringify(labs[0])}</h1>}
+    </Main> 
+  )
 };
 
 export default labs;
