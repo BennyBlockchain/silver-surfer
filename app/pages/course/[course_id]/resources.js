@@ -17,7 +17,16 @@ const resources = () => {
       }
     });
   }
-  return <Main>{resources && <h1>{JSON.stringify(resources[0])}</h1>}</Main>;
+  return (
+  <Main>
+
+    <br /> 
+    <center> 
+      <h2>Course Resources</h2>
+    </center>
+    {resources && <h1>{JSON.stringify(resources[0])}</h1>}
+  </Main>
+  )
 };
 
 export default resources;

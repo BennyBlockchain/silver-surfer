@@ -1,7 +1,10 @@
+
 import Main from "../../../layouts/Main/Main";
+
 import { useRouter } from "next/router";
 import { useState } from "react";
-import { Container, Row, Col, CardColumns } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
+import CardColumns from "react-bootstrap/CardColumns";
 
 import AssignmentCard from "../../../components/AssignmentCard";
 import axios from "axios";
@@ -32,6 +35,7 @@ const homework = () => {
 
 
   return (
+    <div>
     <Main>
 
       <br /> 
@@ -41,23 +45,34 @@ const homework = () => {
       <br /> 
       <br /> 
    
-      <CardColumns
       
-      >
+      <Container>
+      
+      <div className="row row-cols-1 row-cols-sm-3">
+ 
+       
       {homework &&
         homework.map((hw) => {
           return (
+            
             <AssignmentCard
               title={hw.title}
               dueDate={hw.date}
               link={hw.resourceUrl}
               imageUrl={hw.imageUrl}
+              
             />
+            
           );
         })}
-        </CardColumns>
+       
+        </div>
+        
+        </Container>
+       
         <br /> 
     </Main>
+    </div>
   );
 };
 

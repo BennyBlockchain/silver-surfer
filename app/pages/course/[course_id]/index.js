@@ -86,9 +86,8 @@ const CoursePage = () => {
                 <Col>
                 <Link href={`${course_id}/labs`} passHref>
                   <Button
-                    size="block"
-                    variant="primary"
-                    hover=""
+                    size="lg"
+                    variant="primary" 
                     className="border-outline p-4 my-2"
                     style={{ width: "100%" }}
                   >
