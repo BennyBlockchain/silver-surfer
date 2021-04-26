@@ -20,8 +20,14 @@ const resources = () => {
   }
   return (
     <Main>
-      <Container fluid>
-        <h1>Resources</h1>
+      <Container>
+        <br /> 
+        <center> 
+        <h2>Resources</h2>
+        </center> 
+        <br /> 
+
+        <div className="row row-cols-1 row-cols-sm-3">
         {resources &&
           resources.map((res, index) => {
             return (
@@ -33,6 +39,7 @@ const resources = () => {
               />
             );
           })}
+          </div>
       </Container>
     </Main>
   );

@@ -21,8 +21,14 @@ const labs = () => {
   if (labs) console.log(labs);
   return (
     <Main>
-      <Container fluid>
-        <h1>Labs</h1>
+      <Container>
+        <br /> 
+        <center> 
+        <h2>Labs</h2>
+        </center>
+        <br /> 
+
+        <div className="row row-cols-1 row-cols-sm-3">
         {labs &&
           labs.map((lab, index) => {
             return (
@@ -34,6 +40,7 @@ const labs = () => {
               />
             );
           })}
+          </div>
       </Container>
     </Main>
   );
