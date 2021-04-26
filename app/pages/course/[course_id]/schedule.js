@@ -25,7 +25,19 @@ const schedule = () => {
   }
   return (
     <Main>
-      <Container fluid>{schedule && <h1>hey</h1>}</Container>
+      <Container fluid>
+        <h1>Schedule</h1>
+        {schedule &&
+          schedule.map((sched, index) => {
+            return (
+              <div className="d-flex justify-content-between" key={index}>
+                <h4 className="d-inline">{sched.title}</h4>
+                <h4 className="d-inline">{sched.description}</h4>
+                <h4 className="d-inline">{sched.date}</h4>
+              </div>
+            );
+          })}
+      </Container>
     </Main>
   );
 };

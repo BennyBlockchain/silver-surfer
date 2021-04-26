@@ -3,7 +3,8 @@ import useSWR from "swr";
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
-
+import { Container } from "react-bootstrap";
+import AssignmentCard from "../../../components/AssignmentCard";
 const labs = () => {
   const fetcher = (url) => axios.get(url).then((r) => r.data);
   const router = useRouter();
@@ -18,7 +19,24 @@ const labs = () => {
     });
   }
   if (labs) console.log(labs);
-  return <Main>{labs && <h1>{JSON.stringify(labs[0])}</h1>}</Main>;
+  return (
+    <Main>
+      <Container fluid>
+        <h1>Labs</h1>
+        {labs &&
+          labs.map((lab, index) => {
+            return (
+              <AssignmentCard
+                key={index}
+                title={lab.title}
+                desc={lab.description}
+                link={lab.link}
+              />
+            );
+          })}
+      </Container>
+    </Main>
+  );
 };
 
 export default labs;
