@@ -26,6 +26,7 @@ const schedule = () => {
   return (
     <Main>
       <Container fluid>
+        <center> 
         <h1>Schedule</h1>
         {schedule &&
           schedule.map((sched, index) => {
@@ -34,9 +35,13 @@ const schedule = () => {
                 <h4 className="d-inline">{sched.title}</h4>
                 <h4 className="d-inline">{sched.description}</h4>
                 <h4 className="d-inline">{sched.date}</h4>
+              <br />
               </div>
+               
             );
           })}
+          
+          </center>
       </Container>
     </Main>
   );
