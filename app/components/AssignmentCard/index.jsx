@@ -11,9 +11,9 @@ const AssignmentCard = ({ title, desc, link, imageUrl }) => {
         <Card.Title>{title}</Card.Title>
 
         <Card.Text>Description: {desc}</Card.Text>
-        <Link href={link} passHref>
-          <a>Homework Resource</a>
-        </Link>
+
+        <a href={link}>Homework Resource</a>
+
         <Card.Link href={link}></Card.Link>
       </Card.Body>
     </Card>

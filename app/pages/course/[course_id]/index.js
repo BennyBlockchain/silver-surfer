@@ -21,6 +21,7 @@ const CoursePage = () => {
     let course = courses.filter((course) => course.course_number === course_id);
     setCourse(course[0]);
   }
+  if (course) console.log(course);
   return (
     <Main>
       <Container className="my-3 w-75">
@@ -35,10 +36,8 @@ const CoursePage = () => {
             <Container> 
               <Row> 
                 <Col>
-                <Link
-                  href={`https://stluciadance.com/prospectus_file/sample.pdf`}
-                  passHref
-                >
+  
+              <Link href={course.syllabus} passHref>
                 <Button
                   size="lg"
                   target="_blank"

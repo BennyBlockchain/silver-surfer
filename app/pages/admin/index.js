@@ -22,7 +22,6 @@ export default function admin() {
   if (session && !courses) {
     fetcher(`/api/courses/${session.user.name}`);
   }
-  console.log(session);
   return (
     <>
       {!session && (courses || !courses) && <Login />}

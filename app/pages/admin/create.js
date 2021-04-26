@@ -23,6 +23,7 @@ export default function create() {
   const [confirm, setConfirm] = useState();
   const [active, setActive] = useState();
   const [labs, setlabs] = useState([]);
+  const [syllabus, setSyllabus] = useState("");
   const [resources, setresources] = useState([]);
   const [homework, sethomework] = useState([]);
   const [schedule, setschedule] = useState([]);
@@ -35,14 +36,17 @@ export default function create() {
     switch (active) {
       case "syllabus":
         const submitSyllabus = (e) => {
-          console.log(e.target.syllabus.value);
+          e.preventDefault();
+          setSyllabus(e.target.syllabus.value);
+          console.log(syllabus);
         };
         let jsxSyl = (
           <>
             <h1>Syllabus</h1>
             <Form onSubmit={submitSyllabus}>
-              <Form.Group>
-                <Form.File id="syllabus" label="Upload Syllabus" />
+              <Form.Group controlId="syllabus">
+                <Form.Label>Syllabus Title</Form.Label>
+                <Form.Control type="text" placeholder="Syllabus" />
               </Form.Group>
               <Button variant="primary" type="submit">
                 Submit
@@ -304,6 +308,12 @@ export default function create() {
               </Button>
             </div>
             <div className="d-flex flex-column align-items-center">
+              {syllabus.length > 0 && (
+                <>
+                  <h3 className="mt-4">Syllabus</h3>
+                  <p className="">{syllabus}</p>
+                </>
+              )}
               {labs.length > 0 && (
                 <>
                   <h3>Labs</h3>
@@ -328,7 +338,8 @@ export default function create() {
                         key={index}
                         title={hw.title}
                         desc={hw.description}
-                        link={hw.link}
+                        link={hw.resourceUrl}
+                        imageUrl={hw.imageUrl}
                       />
                     );
                   })}
@@ -358,7 +369,7 @@ export default function create() {
                         key={index}
                         title={sched.title}
                         desc={sched.description}
-                        link={sched.link}
+                        date={sched.date}
                       />
                     );
                   })}
@@ -389,8 +400,8 @@ export default function create() {
             variant="primary"
             onClick={() => {
               createCourse(
-                { homework, labs, resources, create, schedule },
-                "Cindric"
+                { homework, labs, resources, create, schedule, syllabus },
+                session.user.name
               ).then((response) => {
                 if (response === true) {
                   setConfirm(false);
@@ -420,7 +431,7 @@ const createCourse = async (data, professor) => {
       course_number: courseNumber,
       about: courseAbout,
       professor: professor,
-      syllabus: "google.com",
+      syllabus: data.syllabus,
       schedule: data.schedule,
       homework: data.homework,
       labs: data.labs,

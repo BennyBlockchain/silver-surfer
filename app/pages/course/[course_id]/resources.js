@@ -3,7 +3,8 @@ import axios from "axios";
 import useSWR from "swr";
 import { useRouter } from "next/router";
 import { useState } from "react";
-
+import { Container } from "react-bootstrap";
+import AssignmentCard from "../../../components/AssignmentCard";
 const resources = () => {
   const fetcher = (url) => axios.get(url).then((r) => r.data);
   const router = useRouter();
@@ -18,15 +19,23 @@ const resources = () => {
     });
   }
   return (
-  <Main>
-
-    <br /> 
-    <center> 
-      <h2>Course Resources</h2>
-    </center>
-    {resources && <h1>{JSON.stringify(resources[0])}</h1>}
-  </Main>
-  )
+    <Main>
+      <Container fluid>
+        <h1>Resources</h1>
+        {resources &&
+          resources.map((res, index) => {
+            return (
+              <AssignmentCard
+                key={index}
+                title={res.title}
+                desc={res.description}
+                link={res.link}
+              />
+            );
+          })}
+      </Container>
+    </Main>
+  );
 };
 
 export default resources;
