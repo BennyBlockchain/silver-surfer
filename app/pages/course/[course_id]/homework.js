@@ -55,7 +55,7 @@ const homework = () => {
             
             <AssignmentCard
               title={hw.title}
-              dueDate={hw.date}
+              desc={hw.description}
               link={hw.resourceUrl}
               imageUrl={hw.imageUrl}
               
