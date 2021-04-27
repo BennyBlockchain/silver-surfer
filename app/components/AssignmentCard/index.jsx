@@ -1,8 +1,10 @@
 import { Card } from "react-bootstrap";
+import {CardColumns} from "react-bootstrap";
 import Link from "next/link";
 
 const AssignmentCard = ({ title, desc, link, imageUrl }) => {
   return (
+
     <Card style={{ width: "18rem" }}>
       <Card.Img variant="top" src={imageUrl} />
       <Card.Body>
@@ -15,6 +17,7 @@ const AssignmentCard = ({ title, desc, link, imageUrl }) => {
         <Card.Link href={link}></Card.Link>
       </Card.Body>
     </Card>
+    
   );
 };
 

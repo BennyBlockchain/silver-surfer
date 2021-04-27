@@ -17,7 +17,7 @@ const MainNav = () => {
           </Navbar.Brand>
         </Link>
         <Nav className="d-flex">
-          <Nav.Link href="/majors" className={styles.link}>
+          <Nav.Link href="/majors"className={styles.link}>
             Majors
           </Nav.Link>
 

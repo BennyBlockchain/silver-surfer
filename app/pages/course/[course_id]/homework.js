@@ -1,10 +1,14 @@
+
 import Main from "../../../layouts/Main/Main";
+
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { Container } from "react-bootstrap";
 import AssignmentCard from "../../../components/AssignmentCard";
 import axios from "axios";
 import useSWR from "swr";
+
+
 const homework = () => {
   // Get data
   // Perform get request function
@@ -25,23 +29,48 @@ const homework = () => {
       }
     });
   }
+
+
+
   return (
+    <div>
     <Main>
-      <Container fluid>
-        <h1>Homework</h1>
-        {homework &&
-          homework.map((hw) => {
-            return (
-              <AssignmentCard
-                title={hw.title}
-                dueDate={hw.date}
-                link={hw.resourceUrl}
-                imageUrl={hw.imageUrl}
-              />
-            );
-          })}
-      </Container>
+
+      <br /> 
+      <center>
+      <h2>Homework Assignments</h2>
+      </center>
+      <br /> 
+      <br /> 
+   
+      
+      <Container>
+      
+      <div className="row row-cols-1 row-cols-sm-3">
+ 
+       
+      {homework &&
+        homework.map((hw) => {
+          return (
+            
+            <AssignmentCard
+              title={hw.title}
+              dueDate={hw.date}
+              link={hw.resourceUrl}
+              imageUrl={hw.imageUrl}
+              
+            />
+            
+          );
+        })}
+       
+        </div>
+        
+        </Container>
+       
+        <br /> 
     </Main>
+    </div>
   );
 };
 
