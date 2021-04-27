@@ -21,7 +21,6 @@ const CoursePage = () => {
     let course = courses.filter((course) => course.course_number === course_id);
     setCourse(course[0]);
   }
-  if (course) console.log(course);
   return (
     <Main>
       <Container className="my-3 w-75">

@@ -18,7 +18,6 @@ const labs = () => {
       }
     });
   }
-  if (labs) console.log(labs);
   return (
     <Main>
       <Container>
@@ -36,7 +35,7 @@ const labs = () => {
                 key={index}
                 title={lab.title}
                 desc={lab.description}
-                link={lab.link}
+                link={lab.url}
               />
             );
           })}

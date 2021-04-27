@@ -56,6 +56,7 @@ const homework = () => {
             <AssignmentCard
               title={hw.title}
               desc={hw.description}
+
               link={hw.resourceUrl}
               imageUrl={hw.imageUrl}
               
