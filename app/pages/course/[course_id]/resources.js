@@ -28,8 +28,8 @@ const resources = () => {
               <AssignmentCard
                 key={index}
                 title={res.title}
-                desc={res.description}
-                link={res.link}
+                desc={res.descritpion}
+                link={res.url}
               />
             );
           })}
